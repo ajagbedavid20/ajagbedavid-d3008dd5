@@ -2,40 +2,38 @@ import { Button } from "@/components/ui/button";
 import { Target, Lightbulb, TrendingUp, Users, Mail, Phone, MapPin, ArrowRight, CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import davidProfile from "@/assets/david-profile.png";
-
-const milestones = [
-  { number: "50+", label: "Projects Completed" },
-  { number: "30+", label: "Happy Clients" },
-  { number: "70%", label: "Cost Reduction" },
-  { number: "24/7", label: "AI Availability" },
-];
-
-const approach = [
-  {
-    icon: Lightbulb,
-    title: "Strategy",
-    description: "Deep dive into your business processes to identify automation opportunities.",
-  },
-  {
-    icon: Target,
-    title: "Automation",
-    description: "Design and implement custom AI solutions tailored to your needs.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Optimization",
-    description: "Continuously refine and improve automation for maximum efficiency.",
-  },
-  {
-    icon: Users,
-    title: "Results",
-    description: "Measurable outcomes that drive growth and operational excellence.",
-  },
-];
-
+const milestones = [{
+  number: "50+",
+  label: "Projects Completed"
+}, {
+  number: "30+",
+  label: "Happy Clients"
+}, {
+  number: "70%",
+  label: "Cost Reduction"
+}, {
+  number: "24/7",
+  label: "AI Availability"
+}];
+const approach = [{
+  icon: Lightbulb,
+  title: "Strategy",
+  description: "Deep dive into your business processes to identify automation opportunities."
+}, {
+  icon: Target,
+  title: "Automation",
+  description: "Design and implement custom AI solutions tailored to your needs."
+}, {
+  icon: TrendingUp,
+  title: "Optimization",
+  description: "Continuously refine and improve automation for maximum efficiency."
+}, {
+  icon: Users,
+  title: "Results",
+  description: "Measurable outcomes that drive growth and operational excellence."
+}];
 const About = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 bg-gradient-hero">
         <div className="container mx-auto container-padding">
@@ -57,11 +55,7 @@ const About = () => {
             {/* Image */}
             <div className="relative animate-fade-in-left">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={davidProfile}
-                  alt="David Ajagbe"
-                  className="w-full h-auto object-cover"
-                />
+                <img alt="David Ajagbe" className="w-full h-auto object-cover" src="/lovable-uploads/0ce0f213-9c79-43bd-9de5-7084dc138f53.png" />
               </div>
               <div className="absolute -bottom-6 -right-6 w-full h-full bg-primary/10 rounded-2xl -z-10"></div>
             </div>
@@ -90,17 +84,12 @@ const About = () => {
 
           {/* Milestones */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-            {milestones.map((milestone, index) => (
-              <div
-                key={milestone.label}
-                className="text-center p-6 rounded-2xl bg-gradient-card border border-border"
-              >
+            {milestones.map((milestone, index) => <div key={milestone.label} className="text-center p-6 rounded-2xl bg-gradient-card border border-border">
                 <p className="font-display text-4xl font-bold text-primary mb-2">
                   {milestone.number}
                 </p>
                 <p className="text-muted-foreground font-medium">{milestone.label}</p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -118,11 +107,7 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {approach.map((step, index) => (
-              <div
-                key={step.title}
-                className="relative p-6 rounded-2xl bg-background border border-border text-center hover-lift"
-              >
+            {approach.map((step, index) => <div key={step.title} className="relative p-6 rounded-2xl bg-background border border-border text-center hover-lift">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground font-bold text-sm">
                   {index + 1}
                 </div>
@@ -135,8 +120,7 @@ const About = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {step.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -155,10 +139,7 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a
-                href="mailto:david@ajagbe.com"
-                className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group"
-              >
+              <a href="mailto:david@ajagbe.com" className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group">
                 <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Mail className="w-7 h-7 text-primary-foreground" />
                 </div>
@@ -166,10 +147,7 @@ const About = () => {
                 <p className="text-muted-foreground text-sm">david@ajagbe.com</p>
               </a>
 
-              <a
-                href="tel:+1234567890"
-                className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group"
-              >
+              <a href="tel:+1234567890" className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group">
                 <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Phone className="w-7 h-7 text-primary-foreground" />
                 </div>
@@ -204,8 +182,6 @@ const About = () => {
           </Button>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default About;

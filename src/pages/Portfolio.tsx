@@ -114,14 +114,11 @@ const Portfolio = () => {
                   key={project.title}
                   className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden"
                 >
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                  </div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                   <div className="p-6">
                     <h3 className="font-display text-xl font-semibold text-foreground mb-3">
                       {project.title}

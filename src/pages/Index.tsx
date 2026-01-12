@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Zap, Bot, Workflow, Settings, ArrowRight, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import davidProfile from "@/assets/david-profile.png";
 const valueProps = [{
@@ -62,8 +63,8 @@ const Index = () => {
                   Book a Free Strategy Call
                   <ArrowRight className="w-5 h-5" />
                 </Button>
-                <Button variant="heroOutline" size="xl">
-                  View My Work
+                <Button variant="heroOutline" size="xl" asChild>
+                  <Link to="/portfolio">View My Work</Link>
                 </Button>
               </div>
               {/* Trust Badges */}

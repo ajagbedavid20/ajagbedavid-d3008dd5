@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Workflow, Bot, Settings, TrendingUp, Clock, Users } from "lucide-react";
+import { ArrowRight, TrendingUp } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const portfolioSections = [
@@ -11,19 +11,19 @@ const portfolioSections = [
         title: "E-commerce Order Automation",
         description: "Automated order processing, inventory updates, and shipping notifications for a major online retailer.",
         result: "85% reduction in processing time",
-        icon: Workflow,
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       },
       {
         title: "Lead Generation Pipeline",
         description: "AI-powered lead scoring and automatic CRM updates with personalized follow-up sequences.",
         result: "3x increase in qualified leads",
-        icon: TrendingUp,
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
       },
       {
         title: "Document Processing System",
         description: "Intelligent document extraction and classification for a financial services firm.",
         result: "60% cost savings",
-        icon: Settings,
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
       },
     ],
   },
@@ -35,19 +35,19 @@ const portfolioSections = [
         title: "Customer Support Voice Bot",
         description: "24/7 AI voice agent handling customer inquiries, troubleshooting, and ticket creation.",
         result: "70% call resolution rate",
-        icon: Bot,
+        image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop",
       },
       {
         title: "Appointment Booking Agent",
         description: "Voice-enabled scheduling system for a healthcare provider with calendar integration.",
         result: "40% reduction in no-shows",
-        icon: Clock,
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
       },
       {
         title: "Sales Qualification Agent",
         description: "AI agent that qualifies inbound leads and schedules demos with sales representatives.",
         result: "50% more demos booked",
-        icon: Users,
+        image: "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=600&h=400&fit=crop",
       },
     ],
   },
@@ -59,19 +59,19 @@ const portfolioSections = [
         title: "CRM-Marketing Automation",
         description: "Bi-directional sync between Salesforce and marketing platforms with automated campaigns.",
         result: "2x marketing efficiency",
-        icon: Workflow,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       },
       {
         title: "Finance & Accounting Sync",
         description: "Automated invoicing, payment tracking, and financial reporting integration.",
         result: "90% time saved on bookkeeping",
-        icon: TrendingUp,
+        image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop",
       },
       {
         title: "HR Onboarding Automation",
         description: "Complete employee onboarding workflow with document management and training assignment.",
         result: "75% faster onboarding",
-        icon: Users,
+        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop",
       },
     ],
   },
@@ -112,20 +112,27 @@ const Portfolio = () => {
               {section.projects.map((project, index) => (
                 <div
                   key={project.title}
-                  className="group p-6 rounded-2xl bg-background border border-border hover-lift"
+                  className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                    <project.icon className="w-7 h-7 text-primary-foreground" />
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    {project.description}
-                  </p>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                    <TrendingUp className="w-4 h-4 text-primary" />
-                    <span className="text-primary font-semibold text-sm">{project.result}</span>
+                  <div className="p-6">
+                    <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
+                      <TrendingUp className="w-4 h-4 text-primary" />
+                      <span className="text-primary font-semibold text-sm">{project.result}</span>
+                    </div>
                   </div>
                 </div>
               ))}

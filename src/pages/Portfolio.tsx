@@ -142,7 +142,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project 7 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-7.jpg" alt="CRM-Marketing Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="CRM-Marketing Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/5ce0e068-df16-4e1a-87f9-737ec4276fe8.png" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">CRM-Marketing Automation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Bi-directional sync between Salesforce and marketing platforms with automated campaigns.</p>
@@ -155,7 +155,7 @@ const Portfolio = () => {
 
             {/* Project 8 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-8.jpg" alt="Finance & Accounting Sync" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="Finance & Accounting Sync" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/76624c0c-6fcf-4543-975d-5bdc43a6a608.png" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Finance & Accounting Sync</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Automated invoicing, payment tracking, and financial reporting integration.</p>
@@ -168,7 +168,7 @@ const Portfolio = () => {
 
             {/* Project 9 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-9.jpg" alt="HR Onboarding Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="HR Onboarding Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/d0f2d07b-b2e7-4cd8-9e72-1f836cef06e7.png" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">HR Onboarding Automation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Complete employee onboarding workflow with document management and training assignment.</p>

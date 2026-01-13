@@ -1,11 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import Layout from "@/components/Layout";
-
-
 const Portfolio = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 bg-gradient-hero">
         <div className="container mx-auto container-padding">
@@ -35,7 +32,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project 1 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-1.jpg" alt="E-commerce Order Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="E-commerce Order Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/6a90b6a4-fda2-40fe-bc1c-e6b516e61f7b.webp" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">E-commerce Order Automation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Automated order processing, inventory updates, and shipping notifications for a major online retailer.</p>
@@ -200,8 +197,6 @@ const Portfolio = () => {
           </Button>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Portfolio;

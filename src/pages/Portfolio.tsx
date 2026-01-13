@@ -2,6 +2,17 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import Layout from "@/components/Layout";
 
+// Static portfolio images - replace these paths with your own images
+import project1Image from "@/assets/portfolio/project-1.jpg";
+import project2Image from "@/assets/portfolio/project-2.jpg";
+import project3Image from "@/assets/portfolio/project-3.jpg";
+import project4Image from "@/assets/portfolio/project-4.jpg";
+import project5Image from "@/assets/portfolio/project-5.jpg";
+import project6Image from "@/assets/portfolio/project-6.jpg";
+import project7Image from "@/assets/portfolio/project-7.jpg";
+import project8Image from "@/assets/portfolio/project-8.jpg";
+import project9Image from "@/assets/portfolio/project-9.jpg";
+
 const portfolioSections = [
   {
     title: "AI Automation Projects",
@@ -11,19 +22,19 @@ const portfolioSections = [
         title: "E-commerce Order Automation",
         description: "Automated order processing, inventory updates, and shipping notifications for a major online retailer.",
         result: "85% reduction in processing time",
-        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+        image: project1Image,
       },
       {
         title: "Lead Generation Pipeline",
         description: "AI-powered lead scoring and automatic CRM updates with personalized follow-up sequences.",
         result: "3x increase in qualified leads",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+        image: project2Image,
       },
       {
         title: "Document Processing System",
         description: "Intelligent document extraction and classification for a financial services firm.",
         result: "60% cost savings",
-        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+        image: project3Image,
       },
     ],
   },
@@ -35,19 +46,19 @@ const portfolioSections = [
         title: "Customer Support Voice Bot",
         description: "24/7 AI voice agent handling customer inquiries, troubleshooting, and ticket creation.",
         result: "70% call resolution rate",
-        image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop",
+        image: project4Image,
       },
       {
         title: "Appointment Booking Agent",
         description: "Voice-enabled scheduling system for a healthcare provider with calendar integration.",
         result: "40% reduction in no-shows",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+        image: project5Image,
       },
       {
         title: "Sales Qualification Agent",
         description: "AI agent that qualifies inbound leads and schedules demos with sales representatives.",
         result: "50% more demos booked",
-        image: "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?w=600&h=400&fit=crop",
+        image: project6Image,
       },
     ],
   },
@@ -59,19 +70,19 @@ const portfolioSections = [
         title: "CRM-Marketing Automation",
         description: "Bi-directional sync between Salesforce and marketing platforms with automated campaigns.",
         result: "2x marketing efficiency",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+        image: project7Image,
       },
       {
         title: "Finance & Accounting Sync",
         description: "Automated invoicing, payment tracking, and financial reporting integration.",
         result: "90% time saved on bookkeeping",
-        image: "https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&h=400&fit=crop",
+        image: project8Image,
       },
       {
         title: "HR Onboarding Automation",
         description: "Complete employee onboarding workflow with document management and training assignment.",
         result: "75% faster onboarding",
-        image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop",
+        image: project9Image,
       },
     ],
   },

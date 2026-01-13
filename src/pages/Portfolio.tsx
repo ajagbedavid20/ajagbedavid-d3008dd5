@@ -32,7 +32,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project 1 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="E-commerce Order Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/6a90b6a4-fda2-40fe-bc1c-e6b516e61f7b.webp" />
+              <img alt="E-commerce Order Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/436322ca-dc66-4f4e-8a1d-8feb5f19adf9.webp" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">E-commerce Order Automation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Automated order processing, inventory updates, and shipping notifications for a major online retailer.</p>
@@ -45,7 +45,7 @@ const Portfolio = () => {
 
             {/* Project 2 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-2.jpg" alt="Lead Generation Pipeline" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="Lead Generation Pipeline" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/12b94480-ab25-4818-8cfd-605d98c36571.webp" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Lead Generation Pipeline</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">AI-powered lead scoring and automatic CRM updates with personalized follow-up sequences.</p>
@@ -58,7 +58,7 @@ const Portfolio = () => {
 
             {/* Project 3 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-3.jpg" alt="Document Processing System" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="Document Processing System" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/ef988307-751a-40a2-b583-61ca8846b8e6.png" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Document Processing System</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Intelligent document extraction and classification for a financial services firm.</p>
@@ -87,7 +87,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project 4 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-4.jpg" alt="Customer Support Voice Bot" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="Customer Support Voice Bot" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/68cd0816-5cc5-4100-a5a4-97d79b1ec53c.png" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Customer Support Voice Bot</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">24/7 AI voice agent handling customer inquiries, troubleshooting, and ticket creation.</p>
@@ -100,7 +100,7 @@ const Portfolio = () => {
 
             {/* Project 5 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-5.jpg" alt="Appointment Booking Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="Appointment Booking Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/a931b3cf-50de-494f-bba5-0c0b2e01c1bb.webp" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Appointment Booking Agent</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Voice-enabled scheduling system for a healthcare provider with calendar integration.</p>
@@ -113,7 +113,7 @@ const Portfolio = () => {
 
             {/* Project 6 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src="/portfolio/project-6.jpg" alt="Sales Qualification Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img alt="Sales Qualification Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/4e4b2ea3-c456-4c25-8b0a-874aa62dddf7.png" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Sales Qualification Agent</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">AI agent that qualifies inbound leads and schedules demos with sales representatives.</p>

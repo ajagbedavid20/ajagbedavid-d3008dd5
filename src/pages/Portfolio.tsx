@@ -2,17 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp } from "lucide-react";
 import Layout from "@/components/Layout";
 
-// Static portfolio images - replace these paths with your own images
-import project1Image from "@/assets/portfolio/project-1.jpg";
-import project2Image from "@/assets/portfolio/project-2.jpg";
-import project3Image from "@/assets/portfolio/project-3.jpg";
-import project4Image from "@/assets/portfolio/project-4.jpg";
-import project5Image from "@/assets/portfolio/project-5.jpg";
-import project6Image from "@/assets/portfolio/project-6.jpg";
-import project7Image from "@/assets/portfolio/project-7.jpg";
-import project8Image from "@/assets/portfolio/project-8.jpg";
-import project9Image from "@/assets/portfolio/project-9.jpg";
-
 
 const Portfolio = () => {
   return (
@@ -46,7 +35,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project 1 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project1Image} alt="E-commerce Order Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-1.jpg" alt="E-commerce Order Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">E-commerce Order Automation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Automated order processing, inventory updates, and shipping notifications for a major online retailer.</p>
@@ -59,7 +48,7 @@ const Portfolio = () => {
 
             {/* Project 2 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project2Image} alt="Lead Generation Pipeline" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-2.jpg" alt="Lead Generation Pipeline" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Lead Generation Pipeline</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">AI-powered lead scoring and automatic CRM updates with personalized follow-up sequences.</p>
@@ -72,7 +61,7 @@ const Portfolio = () => {
 
             {/* Project 3 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project3Image} alt="Document Processing System" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-3.jpg" alt="Document Processing System" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Document Processing System</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Intelligent document extraction and classification for a financial services firm.</p>
@@ -101,7 +90,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project 4 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project4Image} alt="Customer Support Voice Bot" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-4.jpg" alt="Customer Support Voice Bot" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Customer Support Voice Bot</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">24/7 AI voice agent handling customer inquiries, troubleshooting, and ticket creation.</p>
@@ -114,7 +103,7 @@ const Portfolio = () => {
 
             {/* Project 5 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project5Image} alt="Appointment Booking Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-5.jpg" alt="Appointment Booking Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Appointment Booking Agent</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Voice-enabled scheduling system for a healthcare provider with calendar integration.</p>
@@ -127,7 +116,7 @@ const Portfolio = () => {
 
             {/* Project 6 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project6Image} alt="Sales Qualification Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-6.jpg" alt="Sales Qualification Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Sales Qualification Agent</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">AI agent that qualifies inbound leads and schedules demos with sales representatives.</p>
@@ -156,7 +145,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project 7 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project7Image} alt="CRM-Marketing Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-7.jpg" alt="CRM-Marketing Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">CRM-Marketing Automation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Bi-directional sync between Salesforce and marketing platforms with automated campaigns.</p>
@@ -169,7 +158,7 @@ const Portfolio = () => {
 
             {/* Project 8 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project8Image} alt="Finance & Accounting Sync" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-8.jpg" alt="Finance & Accounting Sync" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Finance & Accounting Sync</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Automated invoicing, payment tracking, and financial reporting integration.</p>
@@ -182,7 +171,7 @@ const Portfolio = () => {
 
             {/* Project 9 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img src={project9Image} alt="HR Onboarding Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
+              <img src="/portfolio/project-9.jpg" alt="HR Onboarding Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">HR Onboarding Automation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Complete employee onboarding workflow with document management and training assignment.</p>

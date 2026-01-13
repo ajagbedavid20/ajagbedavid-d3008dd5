@@ -44,7 +44,7 @@ const Portfolio = () => {
             </div>
 
             {/* Project 2 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
+            <div className="group rounded-2xl border border-border hover-lift overflow-hidden bg-primary-foreground">
               <img alt="Lead Generation Pipeline" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/12b94480-ab25-4818-8cfd-605d98c36571.webp" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">Lead Generation Pipeline</h3>

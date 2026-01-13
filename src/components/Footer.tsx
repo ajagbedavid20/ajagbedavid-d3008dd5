@@ -14,16 +14,12 @@ const footerLinks = [{
   path: "/testimonials"
 }];
 const socialLinks = [{
+  name: "Facebook",
+  icon: Facebook,
+  url: "#"
+}, {
   name: "LinkedIn",
   icon: Linkedin,
-  url: "#"
-}, {
-  name: "Twitter",
-  icon: Twitter,
-  url: "#"
-}, {
-  name: "Instagram",
-  icon: Instagram,
   url: "#"
 }];
 const Footer = () => {

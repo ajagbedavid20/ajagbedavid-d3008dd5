@@ -142,7 +142,7 @@ const Portfolio = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Project 7 */}
             <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="CRM-Marketing Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/5ce0e068-df16-4e1a-87f9-737ec4276fe8.png" />
+              <img alt="CRM-Marketing Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/f874789d-c4d1-4b14-bee1-6637aa8c207a.png" />
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-foreground mb-3">CRM-Marketing Automation</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">Bi-directional sync between Salesforce and marketing platforms with automated campaigns.</p>

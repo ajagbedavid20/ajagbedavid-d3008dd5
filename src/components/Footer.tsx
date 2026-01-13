@@ -1,26 +1,39 @@
 import { Link } from "react-router-dom";
-import { Zap, Mail, Phone, Linkedin, Twitter, Instagram, ArrowUp } from "lucide-react";
-
-const footerLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Portfolio", path: "/portfolio" },
-  { name: "Testimonials", path: "/testimonials" },
-];
-
-const socialLinks = [
-  { name: "LinkedIn", icon: Linkedin, url: "#" },
-  { name: "Twitter", icon: Twitter, url: "#" },
-  { name: "Instagram", icon: Instagram, url: "#" },
-];
-
+import { Zap, Mail, Phone, Linkedin, Twitter, Instagram, ArrowUp, Facebook } from "lucide-react";
+const footerLinks = [{
+  name: "Home",
+  path: "/"
+}, {
+  name: "About",
+  path: "/about"
+}, {
+  name: "Portfolio",
+  path: "/portfolio"
+}, {
+  name: "Testimonials",
+  path: "/testimonials"
+}];
+const socialLinks = [{
+  name: "LinkedIn",
+  icon: Linkedin,
+  url: "#"
+}, {
+  name: "Twitter",
+  icon: Twitter,
+  url: "#"
+}, {
+  name: "Instagram",
+  icon: Instagram,
+  url: "#"
+}];
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <footer className="bg-foreground text-background">
+  return <footer className="bg-foreground text-background">
       <div className="container mx-auto container-padding section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
@@ -29,8 +42,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shadow-orange transition-transform group-hover:scale-105">
                 <Zap className="w-5 h-5 text-primary-foreground" />
               </div>
-              <span className="font-display font-bold text-xl">
-                David<span className="text-primary">Ajagbe</span>
+              <span className="font-display font-bold text-xl">David Ajagbe<span className="text-primary">Ajagbe</span>
               </span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed">
@@ -42,16 +54,11 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {footerLinks.map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-background/70 hover:text-primary transition-colors duration-200"
-                  >
+              {footerLinks.map(link => <li key={link.path}>
+                  <Link to={link.path} className="text-background/70 hover:text-primary transition-colors duration-200">
                     {link.name}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -60,21 +67,15 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-lg mb-6">Contact</h4>
             <ul className="space-y-4">
               <li>
-                <a
-                  href="mailto:david@ajagbe.com"
-                  className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors duration-200"
-                >
+                <a href="mailto:david@ajagbe.com" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors duration-200">
                   <Mail className="w-5 h-5" />
-                  <span>david@ajagbe.com</span>
+                  <span>ajagbedavid20@gmail.com</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="tel:+1234567890"
-                  className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors duration-200"
-                >
+                <a href="tel:+1234567890" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors duration-200">
                   <Phone className="w-5 h-5" />
-                  <span>+1 (234) 567-890</span>
+                  <span>+2349130919188</span>
                 </a>
               </li>
             </ul>
@@ -84,16 +85,9 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Follow Me</h4>
             <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  aria-label={social.name}
-                  className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center text-background/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200"
-                >
+              {socialLinks.map(social => <a key={social.name} href={social.url} aria-label={social.name} className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center text-background/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200">
                   <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+                </a>)}
             </div>
           </div>
         </div>
@@ -103,17 +97,11 @@ const Footer = () => {
           <p className="text-background/50 text-sm">
             © {new Date().getFullYear()} David Ajagbe. All rights reserved.
           </p>
-          <button
-            onClick={scrollToTop}
-            className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground hover:bg-primary-dark transition-colors duration-200"
-            aria-label="Scroll to top"
-          >
+          <button onClick={scrollToTop} className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground hover:bg-primary-dark transition-colors duration-200" aria-label="Scroll to top">
             <ArrowUp className="w-5 h-5" />
           </button>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

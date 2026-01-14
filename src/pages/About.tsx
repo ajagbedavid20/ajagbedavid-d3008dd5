@@ -139,15 +139,15 @@ const About = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a href="mailto:david@ajagbe.com" className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group">
+              <a href="mailto:ajagbedavid20@gmail.com" className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group">
                 <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Mail className="w-7 h-7 text-primary-foreground" />
                 </div>
                 <p className="font-semibold text-foreground mb-1">Email</p>
-                <p className="text-muted-foreground text-sm">ajagbedavid20@ajagbe.com</p>
+                <p className="text-muted-foreground text-sm">ajagbedavid20@gmail.com</p>
               </a>
 
-              <a href="tel:+1234567890" className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group">
+              <a href="https://wa.me/2349130919188" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group">
                 <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Phone className="w-7 h-7 text-primary-foreground" />
                 </div>

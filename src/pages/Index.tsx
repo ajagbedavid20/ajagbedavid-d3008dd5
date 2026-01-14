@@ -59,9 +59,11 @@ const Index = () => {
                 I help businesses automate workflows, customer support, and sales processes using AI automation and intelligent AI voice agents—saving time, reducing costs, and increasing efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="xl">
-                  Book a Free Strategy Call
-                  <ArrowRight className="w-5 h-5" />
+                <Button variant="hero" size="xl" asChild>
+                  <a href="https://calendar.app.google/7WstUGCADkFWkKg57" target="_blank" rel="noopener noreferrer">
+                    Book a Free Strategy Call
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
                 </Button>
                 <Button variant="heroOutline" size="xl" asChild>
                   <Link to="/portfolio">View My Work</Link>
@@ -179,9 +181,11 @@ const Index = () => {
             Let's discuss how AI automation can transform your operations, reduce costs, and accelerate your growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="cta" size="xl">
-              Book a Free Strategy Call
-              <ArrowRight className="w-5 h-5" />
+            <Button variant="cta" size="xl" asChild>
+              <a href="https://calendar.app.google/7WstUGCADkFWkKg57" target="_blank" rel="noopener noreferrer">
+                Book a Free Strategy Call
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </Button>
             <Button variant="heroOutline" size="xl" className="border-background text-background hover:bg-background hover:text-foreground">
               Request a Demo

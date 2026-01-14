@@ -47,8 +47,10 @@ const Navigation = () => {
             {navLinks.map(link => <Link key={link.path} to={link.path} className={`font-medium transition-colors duration-200 ${location.pathname === link.path ? "text-primary" : "text-foreground/70 hover:text-primary"}`}>
                 {link.name}
               </Link>)}
-            <Button variant="hero" size="default">
-              Book a Call
+            <Button variant="hero" size="default" asChild>
+              <a href="https://calendar.app.google/7WstUGCADkFWkKg57" target="_blank" rel="noopener noreferrer">
+                Book a Call
+              </a>
             </Button>
           </div>
 
@@ -64,8 +66,10 @@ const Navigation = () => {
             {navLinks.map(link => <Link key={link.path} to={link.path} className={`font-medium py-2 transition-colors duration-200 ${location.pathname === link.path ? "text-primary" : "text-foreground/70 hover:text-primary"}`}>
                 {link.name}
               </Link>)}
-            <Button variant="hero" size="lg" className="mt-2">
-              Book a Call
+            <Button variant="hero" size="lg" className="mt-2" asChild>
+              <a href="https://calendar.app.google/7WstUGCADkFWkKg57" target="_blank" rel="noopener noreferrer">
+                Book a Call
+              </a>
             </Button>
           </div>
         </div>

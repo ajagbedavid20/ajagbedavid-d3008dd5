@@ -176,9 +176,11 @@ const About = () => {
           <p className="text-lg text-background/70 max-w-2xl mx-auto mb-10">
             Ready to transform your operations? Schedule a free consultation to explore the possibilities.
           </p>
-          <Button variant="cta" size="xl">
-            Schedule a Free Consultation
-            <ArrowRight className="w-5 h-5" />
+          <Button variant="cta" size="xl" asChild>
+            <a href="https://calendar.app.google/7WstUGCADkFWkKg57" target="_blank" rel="noopener noreferrer">
+              Schedule a Free Consultation
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </Button>
         </div>
       </section>

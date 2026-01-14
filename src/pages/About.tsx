@@ -144,7 +144,7 @@ const About = () => {
                   <Mail className="w-7 h-7 text-primary-foreground" />
                 </div>
                 <p className="font-semibold text-foreground mb-1">Email</p>
-                <p className="text-muted-foreground text-sm">david@ajagbe.com</p>
+                <p className="text-muted-foreground text-sm">ajagbedavid20@ajagbe.com</p>
               </a>
 
               <a href="tel:+1234567890" className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group">
@@ -152,7 +152,7 @@ const About = () => {
                   <Phone className="w-7 h-7 text-primary-foreground" />
                 </div>
                 <p className="font-semibold text-foreground mb-1">Phone / WhatsApp</p>
-                <p className="text-muted-foreground text-sm">+1 (234) 567-890</p>
+                <p className="text-muted-foreground text-sm">+2349130919188</p>
               </a>
 
               <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border">

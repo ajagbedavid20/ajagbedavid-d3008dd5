@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { Zap, Mail, Phone, Linkedin, Twitter, Instagram, ArrowUp, Facebook } from "lucide-react";
+import { Mail, Phone, Linkedin, ArrowUp, Facebook } from "lucide-react";
+import logo from "@/assets/logo.png";
+
 const footerLinks = [{
   name: "Home",
   path: "/"
@@ -13,6 +15,7 @@ const footerLinks = [{
   name: "Testimonials",
   path: "/testimonials"
 }];
+
 const socialLinks = [{
   name: "Facebook",
   icon: Facebook,
@@ -22,6 +25,7 @@ const socialLinks = [{
   icon: Linkedin,
   url: "#"
 }];
+
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -29,17 +33,16 @@ const Footer = () => {
       behavior: "smooth"
     });
   };
-  return <footer className="bg-foreground text-background">
+
+  return (
+    <footer className="bg-foreground text-background">
       <div className="container mx-auto container-padding section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 group mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center shadow-orange transition-transform group-hover:scale-105">
-                <Zap className="w-5 h-5 text-primary-foreground" />
-              </div>
-              <span className="font-display font-bold text-xl">David Ajagbe<span className="text-primary">Ajagbe</span>
-              </span>
+              <img src={logo} alt="David Ajagbe Logo" className="w-10 h-10 object-contain transition-transform group-hover:scale-105" />
+              <span className="font-display font-bold text-xl">David<span className="text-primary"> Ajagbe</span></span>
             </Link>
             <p className="text-background/70 text-sm leading-relaxed">
               AI Automation & Voice Agent Specialist helping businesses scale with intelligent automation solutions.
@@ -50,11 +53,13 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {footerLinks.map(link => <li key={link.path}>
+              {footerLinks.map(link => (
+                <li key={link.path}>
                   <Link to={link.path} className="text-background/70 hover:text-primary transition-colors duration-200">
                     {link.name}
                   </Link>
-                </li>)}
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -63,13 +68,13 @@ const Footer = () => {
             <h4 className="font-display font-semibold text-lg mb-6">Contact</h4>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:david@ajagbe.com" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors duration-200">
+                <a href="mailto:ajagbedavid20@gmail.com" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors duration-200">
                   <Mail className="w-5 h-5" />
                   <span>ajagbedavid20@gmail.com</span>
                 </a>
               </li>
               <li>
-                <a href="tel:+1234567890" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors duration-200">
+                <a href="tel:+2349130919188" className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors duration-200">
                   <Phone className="w-5 h-5" />
                   <span>+2349130919188</span>
                 </a>
@@ -81,9 +86,11 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Follow Me</h4>
             <div className="flex gap-4">
-              {socialLinks.map(social => <a key={social.name} href={social.url} aria-label={social.name} className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center text-background/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200">
+              {socialLinks.map(social => (
+                <a key={social.name} href={social.url} aria-label={social.name} className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center text-background/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200">
                   <social.icon className="w-5 h-5" />
-                </a>)}
+                </a>
+              ))}
             </div>
           </div>
         </div>
@@ -98,6 +105,8 @@ const Footer = () => {
           </button>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

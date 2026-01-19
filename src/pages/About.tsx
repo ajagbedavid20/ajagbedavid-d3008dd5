@@ -45,24 +45,69 @@ const About = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
-      toast.error("Please fill in all fields");
+    // Validate all fields
+    if (!formData.name.trim()) {
+      toast.error("Please enter your name");
+      return;
+    }
+    
+    if (!formData.email.trim()) {
+      toast.error("Please enter your email");
+      return;
+    }
+    
+    if (!validateEmail(formData.email.trim())) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+    
+    if (!formData.message.trim()) {
+      toast.error("Please enter your message");
+      return;
+    }
+    
+    if (formData.message.trim().length < 10) {
+      toast.error("Message must be at least 10 characters");
       return;
     }
 
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://alliysen.app.n8n.cloud/webhook-test/c058b86a-e23a-417d-bb40-79fd0fb30dcb", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          message: formData.message.trim(),
+          timestamp: new Date().toISOString()
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       toast.success("Message sent! I'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
-
   return <Layout>
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 bg-gradient-hero">

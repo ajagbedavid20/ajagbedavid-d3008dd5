@@ -1,5 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Target, Lightbulb, TrendingUp, Users, Mail, Phone, MapPin, ArrowRight, CheckCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Target, Lightbulb, TrendingUp, Users, Mail, Phone, MapPin, ArrowRight, CheckCircle, Send } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 import Layout from "@/components/Layout";
 import davidProfile from "@/assets/david-profile.png";
 const milestones = [{
@@ -33,6 +38,31 @@ const approach = [{
   description: "Measurable outcomes that drive growth and operational excellence."
 }];
 const About = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast.error("Please fill in all fields");
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    setTimeout(() => {
+      toast.success("Message sent! I'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+      setIsSubmitting(false);
+    }, 1000);
+  };
+
   return <Layout>
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 bg-gradient-hero">
@@ -138,7 +168,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
               <a href="mailto:ajagbedavid20@gmail.com" className="flex flex-col items-center p-6 rounded-2xl bg-gradient-card border border-border hover-lift group">
                 <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Mail className="w-7 h-7 text-primary-foreground" />
@@ -161,6 +191,55 @@ const About = () => {
                 </div>
                 <p className="font-semibold text-foreground mb-1">Location</p>
                 <p className="text-muted-foreground text-sm">Remote / Global</p>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="max-w-2xl mx-auto">
+              <div className="p-8 rounded-2xl bg-gradient-card border border-border">
+                <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center">
+                  Send a Message
+                </h3>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <Label htmlFor="name">Name</Label>
+                      <Input
+                        id="name"
+                        placeholder="Your name"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="bg-background"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email">Email</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="your@email.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="bg-background"
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message</Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Tell me about your project or question..."
+                      rows={5}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="bg-background resize-none"
+                    />
+                  </div>
+                  <Button type="submit" variant="cta" size="lg" className="w-full" disabled={isSubmitting}>
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    <Send className="w-4 h-4 ml-2" />
+                  </Button>
+                </form>
               </div>
             </div>
           </div>

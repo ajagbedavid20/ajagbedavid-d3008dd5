@@ -83,7 +83,7 @@ const About = () => {
     
     try {
       // Using no-cors mode to handle CORS restrictions from the webhook
-      await fetch("https://alliysen.app.n8n.cloud/webhook-test/c058b86a-e23a-417d-bb40-79fd0fb30dcb", {
+      await fetch("https://alliysen.app.n8n.cloud/webhook/c058b86a-e23a-417d-bb40-79fd0fb30dcb", {
         method: "POST",
         mode: "no-cors",
         headers: {

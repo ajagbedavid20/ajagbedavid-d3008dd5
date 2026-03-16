@@ -2,50 +2,38 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, Linkedin, ArrowUp, Facebook } from "lucide-react";
 import logo from "@/assets/logo.png";
 
-const footerLinks = [{
-  name: "Home",
-  path: "/"
-}, {
-  name: "About",
-  path: "/about"
-}, {
-  name: "Portfolio",
-  path: "/portfolio"
-}, {
-  name: "Testimonials",
-  path: "/testimonials"
-}];
+const footerLinks = [
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Portfolio", path: "/portfolio" },
+  { name: "Testimonials", path: "/testimonials" },
+];
 
-const socialLinks = [{
-  name: "Facebook",
-  icon: Facebook,
-  url: "#"
-}, {
-  name: "LinkedIn",
-  icon: Linkedin,
-  url: "#"
-}];
+const socialLinks = [
+  { name: "Facebook", icon: Facebook, url: "#" },
+  { name: "LinkedIn", icon: Linkedin, url: "#" },
+];
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <footer className="bg-foreground text-background">
       <div className="container mx-auto container-padding section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Brand Column */}
+          {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 group mb-6">
               <img src={logo} alt="David Ajagbe Logo" className="w-10 h-10 object-contain transition-transform group-hover:scale-105" />
               <span className="font-display font-bold text-xl">David<span className="text-primary"> Ajagbe</span></span>
             </Link>
-            <p className="text-background/70 text-sm leading-relaxed">
-              AI Automation & Voice Agent Specialist helping businesses scale with intelligent automation solutions.
+            <p className="text-background/70 text-sm leading-relaxed mb-2">
+              Email Marketing & CRM Automation Expert
+            </p>
+            <p className="text-background/50 text-sm leading-relaxed">
+              Helping businesses generate more leads, nurture prospects, and increase revenue through intelligent automation systems.
             </p>
           </div>
 
@@ -53,13 +41,18 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {footerLinks.map(link => (
+              {footerLinks.map((link) => (
                 <li key={link.path}>
                   <Link to={link.path} className="text-background/70 hover:text-primary transition-colors duration-200">
                     {link.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <a href="mailto:ajagbedavid20@gmail.com" className="text-background/70 hover:text-primary transition-colors duration-200">
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -86,7 +79,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Follow Me</h4>
             <div className="flex gap-4">
-              {socialLinks.map(social => (
+              {socialLinks.map((social) => (
                 <a key={social.name} href={social.url} aria-label={social.name} className="w-10 h-10 rounded-lg bg-background/10 flex items-center justify-center text-background/70 hover:bg-primary hover:text-primary-foreground transition-all duration-200">
                   <social.icon className="w-5 h-5" />
                 </a>

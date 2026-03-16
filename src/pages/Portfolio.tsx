@@ -1,9 +1,43 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp } from "lucide-react";
+import { ArrowRight, TrendingUp, Mail, Users, BarChart3 } from "lucide-react";
 import Layout from "@/components/Layout";
+
+const emailProjects = [
+  { title: "Welcome Sequence Automation", description: "Built a 7-email welcome sequence for an ecommerce brand that onboards new subscribers and drives first purchases automatically.", result: "45% open rate achieved", image: "/lovable-uploads/436322ca-dc66-4f4e-8a1d-8feb5f19adf9.webp" },
+  { title: "Lead Nurturing Campaign", description: "Designed a multi-touch lead nurturing campaign for a SaaS company, delivering personalized content based on user behavior and engagement.", result: "3x increase in qualified leads", image: "/lovable-uploads/12b94480-ab25-4818-8cfd-605d98c36571.webp" },
+  { title: "Abandoned Cart Flow", description: "Implemented automated abandoned cart recovery emails for an online store using Klaviyo, recovering lost revenue with timely reminders.", result: "25% cart recovery rate", image: "/lovable-uploads/ef988307-751a-40a2-b583-61ca8846b8e6.png" },
+  { title: "Sales Follow-up Automation", description: "Created an automated sales follow-up sequence in GoHighLevel that nurtures leads after initial consultation bookings.", result: "60% more demos booked", image: "/lovable-uploads/68cd0816-5cc5-4100-a5a4-97d79b1ec53c.png" },
+];
+
+const crmProjects = [
+  { title: "Automated Sales Pipeline", description: "Set up a fully automated sales pipeline in HubSpot with lead scoring, deal tracking, and automated task assignment for a coaching business.", result: "2x sales efficiency", image: "/lovable-uploads/a931b3cf-50de-494f-bba5-0c0b2e01c1bb.webp" },
+  { title: "Lead Scoring System", description: "Implemented an intelligent lead scoring system in GoHighLevel that automatically prioritizes high-value prospects based on engagement data.", result: "40% faster lead response", image: "/lovable-uploads/4e4b2ea3-c456-4c25-8b0a-874aa62dddf7.png" },
+  { title: "Customer Lifecycle Workflows", description: "Designed end-to-end customer lifecycle automation for an agency, from onboarding to renewal reminders and upsell campaigns.", result: "35% improved retention", image: "/lovable-uploads/f874789d-c4d1-4b14-bee1-6637aa8c207a.png" },
+];
+
+const marketingProjects = [
+  { title: "Funnel Automation System", description: "Built a complete marketing funnel with landing pages, lead magnets, email sequences, and CRM integration for a service-based business.", result: "300% lead increase", image: "/lovable-uploads/76624c0c-6fcf-4543-975d-5bdc43a6a608.png" },
+  { title: "Email Segmentation System", description: "Created an advanced email segmentation system in Klaviyo that delivers hyper-personalized content based on purchase history and behavior.", result: "50% higher click rates", image: "/lovable-uploads/d0f2d07b-b2e7-4cd8-9e72-1f836cef06e7.png" },
+];
+
+const ProjectCard = ({ project }: { project: { title: string; description: string; result: string; image: string } }) => (
+  <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
+    <img alt={project.title} className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src={project.image} />
+    <div className="p-6">
+      <h3 className="font-display text-xl font-semibold text-foreground mb-3">{project.title}</h3>
+      <p className="text-muted-foreground leading-relaxed mb-4">{project.description}</p>
+      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
+        <TrendingUp className="w-4 h-4 text-primary" />
+        <span className="text-primary font-semibold text-sm">{project.result}</span>
+      </div>
+    </div>
+  </div>
+);
+
 const Portfolio = () => {
-  return <Layout>
-      {/* Hero Section */}
+  return (
+    <Layout>
+      {/* Hero */}
       <section className="relative pt-32 pb-16 bg-gradient-hero">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
@@ -11,192 +45,94 @@ const Portfolio = () => {
               My <span className="text-gradient">Portfolio</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Explore a selection of AI automation projects that have delivered real results for businesses across industries.
+              Explore email marketing automation, CRM automation, and lead generation projects that have delivered real results for businesses.
             </p>
           </div>
         </div>
       </section>
 
-      {/* AI Automation Projects Section */}
+      {/* Email Automation */}
       <section className="section-padding bg-background">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light text-primary font-medium text-sm mb-4">
+              <Mail className="w-4 h-4" />
+              <span>Email Automation</span>
+            </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              AI Automation Projects
+              Email Automation Systems
             </h2>
             <p className="text-lg text-muted-foreground">
-              End-to-end workflow automation solutions that transform business operations.
+              Automated email campaigns and sequences that nurture leads and drive conversions.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Project 1 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="E-commerce Order Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/436322ca-dc66-4f4e-8a1d-8feb5f19adf9.webp" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">E-commerce Order Automation</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">Automated order processing, inventory updates, and shipping notifications for a major online retailer.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">85% reduction in processing time</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 2 */}
-            <div className="group rounded-2xl border border-border hover-lift overflow-hidden bg-primary-foreground">
-              <img alt="Lead Generation Pipeline" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/12b94480-ab25-4818-8cfd-605d98c36571.webp" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">Lead Generation Pipeline</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">AI-powered lead scoring and automatic CRM updates with personalized follow-up sequences.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">3x increase in qualified leads</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 3 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="Document Processing System" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/ef988307-751a-40a2-b583-61ca8846b8e6.png" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">Document Processing System</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">Intelligent document extraction and classification for a financial services firm.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">60% cost savings</span>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {emailProjects.map((project) => <ProjectCard key={project.title} project={project} />)}
           </div>
         </div>
       </section>
 
-      {/* AI Voice Agent Solutions Section */}
+      {/* CRM Automation */}
       <section className="section-padding bg-secondary/50">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light text-primary font-medium text-sm mb-4">
+              <Users className="w-4 h-4" />
+              <span>CRM Automation</span>
+            </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              AI Voice Agent Solutions
+              CRM Automation Projects
             </h2>
             <p className="text-lg text-muted-foreground">
-              Conversational AI agents that handle customer interactions with human-like precision.
+              Automated pipelines, lead scoring, and customer lifecycle workflows.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Project 4 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="Customer Support Voice Bot" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/68cd0816-5cc5-4100-a5a4-97d79b1ec53c.png" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">Customer Support Voice Bot</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">24/7 AI voice agent handling customer inquiries, troubleshooting, and ticket creation.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">70% call resolution rate</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 5 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="Appointment Booking Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/a931b3cf-50de-494f-bba5-0c0b2e01c1bb.webp" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">Appointment Booking Agent</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">Voice-enabled scheduling system for a healthcare provider with calendar integration.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">40% reduction in no-shows</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 6 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="Sales Qualification Agent" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/4e4b2ea3-c456-4c25-8b0a-874aa62dddf7.png" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">Sales Qualification Agent</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">AI agent that qualifies inbound leads and schedules demos with sales representatives.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">50% more demos booked</span>
-                </div>
-              </div>
-            </div>
+            {crmProjects.map((project) => <ProjectCard key={project.title} project={project} />)}
           </div>
         </div>
       </section>
 
-      {/* Business Workflow Integrations Section */}
+      {/* Marketing Automation */}
       <section className="section-padding bg-background">
         <div className="container mx-auto container-padding">
           <div className="text-center max-w-3xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light text-primary font-medium text-sm mb-4">
+              <BarChart3 className="w-4 h-4" />
+              <span>Marketing Automation</span>
+            </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Business Workflow Integrations
+              Marketing Automation Projects
             </h2>
             <p className="text-lg text-muted-foreground">
-              Seamless integrations connecting your favorite tools for maximum efficiency.
+              Funnel automation, email segmentation, and campaign analytics dashboards.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Project 7 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="CRM-Marketing Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/f874789d-c4d1-4b14-bee1-6637aa8c207a.png" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">CRM-Marketing Automation</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">Bi-directional sync between Salesforce and marketing platforms with automated campaigns.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">2x marketing efficiency</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 8 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="Finance & Accounting Sync" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/76624c0c-6fcf-4543-975d-5bdc43a6a608.png" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">Finance & Accounting Sync</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">Automated invoicing, payment tracking, and financial reporting integration.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">90% time saved on bookkeeping</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Project 9 */}
-            <div className="group rounded-2xl bg-background border border-border hover-lift overflow-hidden">
-              <img alt="HR Onboarding Automation" className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500" src="/lovable-uploads/d0f2d07b-b2e7-4cd8-9e72-1f836cef06e7.png" />
-              <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">HR Onboarding Automation</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">Complete employee onboarding workflow with document management and training assignment.</p>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light">
-                  <TrendingUp className="w-4 h-4 text-primary" />
-                  <span className="text-primary font-semibold text-sm">75% faster onboarding</span>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {marketingProjects.map((project) => <ProjectCard key={project.title} project={project} />)}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA */}
       <section className="section-padding bg-gradient-dark">
         <div className="container mx-auto container-padding text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-background mb-6">
-            See How AI Can <span className="text-primary">Transform</span> Your Business
+            Ready to <span className="text-primary">Automate</span> Your Marketing?
           </h2>
           <p className="text-lg text-background/70 max-w-2xl mx-auto mb-10">
-            Ready to achieve similar results? Let's discuss your unique challenges and create a custom solution.
+            Let's discuss your email marketing and CRM automation needs and create a custom solution for your business.
           </p>
-          <Button variant="cta" size="xl">
-            Start Your AI Project Today
-            <ArrowRight className="w-5 h-5" />
+          <Button variant="cta" size="xl" asChild>
+            <a href="https://calendar.app.google/7WstUGCADkFWkKg57" target="_blank" rel="noopener noreferrer">
+              Book a Free Strategy Call
+              <ArrowRight className="w-5 h-5" />
+            </a>
           </Button>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 };
+
 export default Portfolio;

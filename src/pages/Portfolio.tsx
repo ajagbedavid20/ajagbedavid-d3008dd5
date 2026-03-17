@@ -17,7 +17,7 @@ const crmProjects = [
 
 const marketingProjects = [
   { title: "Funnel Automation System", description: "Built a complete marketing funnel with landing pages, lead magnets, email sequences, and CRM integration for a service-based business.", result: "300% lead increase", image: "/lovable-uploads/180739cf-6a31-422d-8644-2468ea020d7a.png" },
-  { title: "Email Segmentation System", description: "Created an advanced email segmentation system in Klaviyo that delivers hyper-personalized content based on purchase history and behavior.", result: "50% higher click rates", image: "/lovable-uploads/d0f2d07b-b2e7-4cd8-9e72-1f836cef06e7.png" },
+  { title: "Email Segmentation System", description: "Created an advanced email segmentation system in Klaviyo that delivers hyper-personalized content based on purchase history and behavior.", result: "50% higher click rates", image: "/lovable-uploads/9c2fd255-2288-4b23-a351-55f4b50779ea.png" },
 ];
 
 const ProjectCard = ({ project }: { project: { title: string; description: string; result: string; image: string } }) => (

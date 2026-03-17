@@ -119,7 +119,7 @@ const Testimonials = () => {
             Ready to experience the same marketing transformation? Let's build your email and CRM automation system together.
           </p>
           <Button variant="cta" size="xl" asChild>
-            <a href="https://calendar.app.google/7WstUGCADkFWkKg57" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendar.google.com/appointments/schedules/AcZssZ0RpEq1seLDQndjXeGvlgq1zCHPylkBtTGm8M1LgZiVY1p3QjJetzUVT1BhVE8l89eUs9SOdP_L" target="_blank" rel="noopener noreferrer">
               Book a Free Strategy Call
               <ArrowRight className="w-5 h-5" />
             </a>

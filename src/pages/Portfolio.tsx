@@ -3,7 +3,7 @@ import { ArrowRight, TrendingUp, Mail, Users, BarChart3 } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const emailProjects = [
-  { title: "Welcome Sequence Automation", description: "Built a 7-email welcome sequence for an ecommerce brand that onboards new subscribers and drives first purchases automatically.", result: "45% open rate achieved", image: "/lovable-uploads/436322ca-dc66-4f4e-8a1d-8feb5f19adf9.webp" },
+  { title: "Welcome Sequence Automation", description: "Built a 7-email welcome sequence for an ecommerce brand that onboards new subscribers and drives first purchases automatically.", result: "45% open rate achieved", image: "/lovable-uploads/1782a8b1-4355-49f7-9af6-86e783a35b10.jpg" },
   { title: "Lead Nurturing Campaign", description: "Designed a multi-touch lead nurturing campaign for a SaaS company, delivering personalized content based on user behavior and engagement.", result: "3x increase in qualified leads", image: "/lovable-uploads/12b94480-ab25-4818-8cfd-605d98c36571.webp" },
   { title: "Abandoned Cart Flow", description: "Implemented automated abandoned cart recovery emails for an online store using Klaviyo, recovering lost revenue with timely reminders.", result: "25% cart recovery rate", image: "/lovable-uploads/ef988307-751a-40a2-b583-61ca8846b8e6.png" },
   { title: "Sales Follow-up Automation", description: "Created an automated sales follow-up sequence in GoHighLevel that nurtures leads after initial consultation bookings.", result: "60% more demos booked", image: "/lovable-uploads/68cd0816-5cc5-4100-a5a4-97d79b1ec53c.png" },

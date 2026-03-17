@@ -11,7 +11,7 @@ const footerLinks = [
 
 const socialLinks = [
   { name: "Facebook", icon: Facebook, url: "#" },
-  { name: "LinkedIn", icon: Linkedin, url: "#" },
+  { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/in/ajagbedavid20" },
 ];
 
 const Footer = () => {

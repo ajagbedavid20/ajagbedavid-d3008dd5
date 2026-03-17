@@ -11,7 +11,7 @@ const emailProjects = [
 
 const crmProjects = [
   { title: "Automated Sales Pipeline", description: "Set up a fully automated sales pipeline in HubSpot with lead scoring, deal tracking, and automated task assignment for a coaching business.", result: "2x sales efficiency", image: "/lovable-uploads/d8e82f85-14bc-41aa-8828-1787e180da49.webp" },
-  { title: "Lead Scoring System", description: "Implemented an intelligent lead scoring system in GoHighLevel that automatically prioritizes high-value prospects based on engagement data.", result: "40% faster lead response", image: "/lovable-uploads/4e4b2ea3-c456-4c25-8b0a-874aa62dddf7.png" },
+  { title: "Lead Scoring System", description: "Implemented an intelligent lead scoring system in GoHighLevel that automatically prioritizes high-value prospects based on engagement data.", result: "40% faster lead response", image: "/lovable-uploads/514281f5-841e-4bfd-8cdf-c7fbcf14219d.png" },
   { title: "Customer Lifecycle Workflows", description: "Designed end-to-end customer lifecycle automation for an agency, from onboarding to renewal reminders and upsell campaigns.", result: "35% improved retention", image: "/lovable-uploads/f874789d-c4d1-4b14-bee1-6637aa8c207a.png" },
 ];
 
